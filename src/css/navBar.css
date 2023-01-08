@@ -1,0 +1,19 @@
+.burgerLines {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger__countries {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

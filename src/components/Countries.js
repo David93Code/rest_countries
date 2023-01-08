@@ -3,8 +3,6 @@ import service from "../service/countries";
 import rightArrow from "../images/right-arrow.png";
 import { Link } from "react-router-dom";
 
-// make a service folder where you use axios to fetch the countries info
-
 const Countries = ({ countries, filteredCountries }) => {
   return (
     <div className="countriesContainer">
@@ -17,7 +15,6 @@ const Countries = ({ countries, filteredCountries }) => {
         <h2>Languages</h2>
       </div>
 
-      {/* map the props.countries instead of using countries[0]*/}
       {countries.map((country) => {
         return (
           <section key={country.cca2} className="country">

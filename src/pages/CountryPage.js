@@ -15,11 +15,31 @@ const CountryPage = (countries) => {
   }, [countryId]);
 
   return (
-    <div>
-      <h1>Daniele on Pikku Runkarino</h1>
-      <img src={country.flags?.png} />
-      <h2>{country.name?.common}</h2>
-      <p>{country?.capital}</p>
+    <div className="countryPageCardContainer">
+      <section className="countryCardHeader">
+        <p>{country.name?.common[0]}</p>
+        <h2>{country.name?.common}</h2>
+        <p>{country?.capital}</p>
+      </section>
+
+      <section className="imageAndText">
+        <img src={country.flags?.png} />
+        <p>
+          The country belongs to {country.region} region and {country.subregion}{" "}
+          subregion.
+          <br />
+          Located at the {country.latlng} °N and &nbsp;{" "}
+          {country.latlng?.slice(
+            country.latlng.indexOf(","),
+            country.latlng.length
+          )}
+          °W, this country has population of {country.population} <br />
+          and it has {country.independent === false ? (
+            <span>not</span>
+          ) : null}{" "}
+          gained the independent, according to the CIA World Factbook.
+        </p>
+      </section>
       <Link to="/">
         <p>back</p>
       </Link>

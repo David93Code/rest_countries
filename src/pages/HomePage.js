@@ -1,11 +1,10 @@
 import NavBar from "../components/NavBar";
 import Countries from "../components/Countries";
-// import { useState } from "react";
 
 const HomePage = ({ countries }) => {
   return (
     <div>
-      <NavBar />
+      <NavBar countries={countries}/>
       <Countries countries={countries} />
     </div>
   );

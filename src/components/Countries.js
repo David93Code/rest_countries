@@ -1,3 +1,4 @@
+import React from "react";
 import "../css/countries.css";
 import service from "../service/countries";
 import rightArrow from "../images/right-arrow.png";

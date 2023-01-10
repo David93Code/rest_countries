@@ -3,7 +3,7 @@ import Countries from "./Countries";
 import "../css/navBar.css";
 
 const NavBar = ( countries ) => {
-    const [searchInput, setSearchInput] = useState("");
+    // const [searchInput, setSearchInput] = useState("");
 
     // let searchHandler = (e) => {
     //   setSearchInput(e.target.value.toLowerCase());
@@ -13,7 +13,7 @@ const NavBar = ( countries ) => {
     //   if (searchInput === "") {
     //     return country;
     //   } else {
-    //     return country.title.toLowerCase().includes(searchInput);
+    //     return country.name.common.toLowerCase().includes(searchInput);
     //   }
     // });
 

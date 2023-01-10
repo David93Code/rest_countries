@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import Countries from "./Countries";
 import "../css/navBar.css";
 
-const NavBar = (countries) => {
-  //   const [searchInput, setSearchInput] = useState("");
+const NavBar = ( countries ) => {
+    const [searchInput, setSearchInput] = useState("");
 
-  //   let searchHandler = (e) => {
-  //     setSearchInput(e.target.value.toLowerCase());
-  //   };
+    // let searchHandler = (e) => {
+    //   setSearchInput(e.target.value.toLowerCase());
+    // };
 
-  //   const filteredCountries = countries.filter((country) => {
-  //     if (searchInput === "") {
-  //       return country;
-  //     } else {
-  //       return country.title.toLowerCase().includes(searchInput);
-  //     }
-  //   });
+    // const filteredCountries = countries.filter((country) => {
+    //   if (searchInput === "") {
+    //     return country;
+    //   } else {
+    //     return country.title.toLowerCase().includes(searchInput);
+    //   }
+    // });
 
   return (
     <div>
@@ -31,11 +31,12 @@ const NavBar = (countries) => {
         </section>
 
         <input
-          //   onChange={searchHandler}
+            // onChange={searchHandler}
           name="search-input"
           placeholder="Search by Country Name"
         ></input>
       </header>
+      {/* <Countries filteredCountries={filteredCountries} /> */}
     </div>
   );
 };

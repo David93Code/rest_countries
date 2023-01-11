@@ -1,4 +1,17 @@
-.titles {
+/* .titles {
   display: flex;
   justify-content: space-between;
+} */
+
+table {
+  border-collapse: separate; 
+  border-spacing: 0 2em;
+}
+
+.flags {
+  width: 6rem;
+}
+
+.countryHeadings {
+  margin-bottom: 1rem;
 }

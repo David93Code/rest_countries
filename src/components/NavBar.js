@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import Countries from "./Countries";
+
 import "../css/navBar.css";
 
-const NavBar = ( countries ) => {
-    // const [searchInput, setSearchInput] = useState("");
+const NavBar = ({ countries }) => {
+  const [searchInput, setSearchInput] = useState("");
 
-    // let searchHandler = (e) => {
-    //   setSearchInput(e.target.value.toLowerCase());
-    // };
+  let searchHandler = (e) => {
+    setSearchInput(e.target.value.toLowerCase());
+  };
 
-    // const filteredCountries = countries.filter((country) => {
-    //   if (searchInput === "") {
-    //     return country;
-    //   } else {
-    //     return country.name.common.toLowerCase().includes(searchInput);
-    //   }
-    // });
+  const filteredCountries = countries.filter((country) => {
+    if (searchInput === "") {
+      return country;
+    } else {
+      return country.name?.common.toLowerCase().includes(searchInput);
+    }
+  });
 
   return (
     <div>
@@ -30,13 +31,27 @@ const NavBar = ( countries ) => {
           <h1>Country</h1>
         </section>
 
+        <div className="search">
+          <div className="search-bar">
+            <ion-icon name="search-outline"></ion-icon>
+            <input
+              onChange={searchHandler}
+              name="search-input"
+              placeholder="Search for a book..."
+            ></input>
+          </div>
+        </div>
+      </header>
+      <Countries filteredCountries={filteredCountries} />
+
+      {/* 
         <input
-            // onChange={searchHandler}
+      
           name="search-input"
           placeholder="Search by Country Name"
-        ></input>
-      </header>
-      {/* <Countries filteredCountries={filteredCountries} /> */}
+        ></input> */}
+
+      {/* <Search countries={countries}/> */}
     </div>
   );
 };

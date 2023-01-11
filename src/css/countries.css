@@ -4,8 +4,13 @@
 } */
 
 table {
-  border-collapse: separate; 
+  border-collapse: separate;
   border-spacing: 0 2em;
+  table-layout: fixed;
+}
+
+.rightArrow {
+  text-align: center;
 }
 
 .flags {

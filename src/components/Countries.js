@@ -26,11 +26,11 @@ const Countries = ({ countries, filteredCountries }) => {
 
         <table style={{ width: "100%" }}>
           <tr className="countryHeadings">
-            <th>Flag</th>
-            <th>Name</th>
-            <th>Region</th>
-            <th>Population</th>
-            <th>Languages</th>
+            <td>Flag</td>
+            <td>Name</td>
+            <td>Region</td>
+            <td>Population</td>
+            <td>Languages</td>
           </tr>
           {filteredCountries?.map((country) => {
             return (
@@ -51,7 +51,7 @@ const Countries = ({ countries, filteredCountries }) => {
                     </ul>
                   ) : null}
                 </td>
-                <td>
+                <td className="rightArrow">
                   {" "}
                   <Link to={"/" + country.cca2}>
                     <img style={{ width: "1rem" }} src={rightArrow} />

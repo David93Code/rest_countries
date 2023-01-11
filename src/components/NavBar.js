@@ -37,7 +37,7 @@ const NavBar = ({ countries }) => {
             <input
               onChange={searchHandler}
               name="search-input"
-              placeholder="Search for a book..."
+              placeholder="Search by country name"
             ></input>
           </div>
         </div>

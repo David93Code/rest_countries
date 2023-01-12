@@ -1,6 +1,7 @@
 import React from "react";
 import leftArrow from "../images/left-arrow.png";
 import rightArrow from "../images/right-arrow.png";
+import "../css/pagination.css";
 
 const Pagination = ({
   countriesPerPage,

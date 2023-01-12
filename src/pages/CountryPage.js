@@ -32,11 +32,11 @@ const CountryPage = ({ countries }) => {
           <h2>{country.name?.common}</h2>
           <p>{country?.capital}</p>
         </div>
-        <img className="kebab" src={kebabMenu} />
+        <img className="kebab" src={kebabMenu} alt="kebab icon" />
       </section>
 
       <section className="imageAndText">
-        <img className="flag" src={country.flags?.png} />
+        <img className="flag" src={country.flags?.png} alt="country flag" />
         <p>
           The country belongs to{" "}
           <span className="apiText">{country.region}</span> region and{" "}
@@ -65,13 +65,15 @@ const CountryPage = ({ countries }) => {
               className="leftArrow"
               style={{ width: "1rem" }}
               src={leftArrow}
+              alt="arrow to left"
             />
           </Link>
           <a
             href={`https://www.google.com/maps/place/${country.name?.common}`}
             target="_blank"
+            rel="noreferrer"
           >
-            <img style={{ width: "1rem" }} src={map} />
+            <img style={{ width: "1rem" }} src={map} alt="google maps icon" />
           </a>
         </div>
         <Link
@@ -88,6 +90,7 @@ const CountryPage = ({ countries }) => {
             className="downArrow"
             style={{ width: "1rem" }}
             src={downArrow}
+            alt="arrow down"
           />
         </Link>
       </section>

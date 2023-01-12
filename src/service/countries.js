@@ -12,4 +12,6 @@ const getCountry = (countryId) => {
   return request.then((response) => response.data);
 };
 
-export default { getAll, getCountry };
+const service = { getAll, getCountry };
+
+export default service;

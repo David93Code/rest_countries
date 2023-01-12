@@ -22,7 +22,11 @@ const Countries = ({ filteredCountries }) => {
               return (
                 <tr key={country.cca2} className="countryInfo">
                   <td>
-                    <img className="flags" src={country.flags.png} />
+                    <img
+                      className="flags"
+                      src={country.flags.png}
+                      alt="country flag"
+                    />
                   </td>
                   <td>{country.name.common}</td>
                   <td>{country.region}</td>
@@ -40,7 +44,11 @@ const Countries = ({ filteredCountries }) => {
                   <td className="rightArrow">
                     {" "}
                     <Link to={"/" + country.cca2}>
-                      <img style={{ width: "1rem" }} src={rightArrow} />
+                      <img
+                        style={{ width: "1rem" }}
+                        src={rightArrow}
+                        alt="arrow to the right"
+                      />
                     </Link>
                   </td>
                 </tr>

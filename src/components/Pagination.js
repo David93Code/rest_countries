@@ -1,14 +1,12 @@
 import React from "react";
 import leftArrow from "../images/left-arrow.png";
 import rightArrow from "../images/right-arrow.png";
-import pagination from "../css/pagination.css";
 
 const Pagination = ({
   countriesPerPage,
   totalCountries,
   setCurrentPage,
   currentPage,
-  countries,
   setCountriesPerPage,
 }) => {
   const pageNumbers = [];
@@ -48,6 +46,7 @@ const Pagination = ({
         className={currentPage !== 1 ? "paginationArrows" : " disabledArrow"}
         onClick={prevPage}
         src={leftArrow}
+        alt="arrow to the left"
       />
       <img
         className={
@@ -57,6 +56,7 @@ const Pagination = ({
         }
         onClick={nextPage}
         src={rightArrow}
+        alt="arrow to the right"
       />
     </div>
   );

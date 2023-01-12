@@ -9,15 +9,15 @@ const Countries = ({ filteredCountries }) => {
       <section className="country">
         <table style={{ width: "100%" }}>
           <thead>
-            <tr className="countryHeadings">
+            <tr className="countryTableHeadings">
               <td>Flag</td>
               <td>Name</td>
               <td>Region</td>
               <td>Population</td>
-              <td>Languages</td>
+              <td colSpan={2}>Languages</td>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="countryTableBody">
             {filteredCountries?.map((country) => {
               return (
                 <tr key={country.cca2} className="countryInfo">

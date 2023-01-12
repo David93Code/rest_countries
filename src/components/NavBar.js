@@ -31,16 +31,16 @@ const NavBar = ({ countries }) => {
           <h1>Country</h1>
         </section>
 
-        <div className="search">
-          <div className="search-bar">
-            <ion-icon name="search-outline"></ion-icon>
-            <input
-              onChange={searchHandler}
-              name="search-input"
-              placeholder="Search by country name"
-            ></input>
-          </div>
+        {/* <div className="search"> */}
+        <div className="search-bar">
+          <ion-icon name="search-outline"></ion-icon>
+          <input
+            onChange={searchHandler}
+            name="search-input"
+            placeholder="Search by country name"
+          ></input>
         </div>
+        {/* </div> */}
       </header>
       <Countries filteredCountries={filteredCountries} />
 

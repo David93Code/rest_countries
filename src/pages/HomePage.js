@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const HomePage = ({ countries }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [countriesPerPage] = useState(5);
+  const [countriesPerPage, setCountriesPerPage] = useState(5);
 
   // Get current posts
   const indexOfLastCountry = currentPage * countriesPerPage;
@@ -13,6 +13,8 @@ const HomePage = ({ countries }) => {
     indexOfFirstCountry,
     indexOfLastCountry
   );
+
+  console.log(currentPage);
 
   //Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -24,6 +26,10 @@ const HomePage = ({ countries }) => {
         countriesPerPage={countriesPerPage}
         totalCountries={countries.length}
         paginate={paginate}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        countries={countries}
+        setCountriesPerPage={setCountriesPerPage}
       />
     </div>
   );

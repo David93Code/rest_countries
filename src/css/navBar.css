@@ -1,26 +1,22 @@
-/* body,
-html {
-  width: 100%;
-  height: 100%;
-} */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
 
 .burgerLines {
+  background-color: white;
   width: 35px;
   height: 5px;
-  background-color: black;
   margin: 6px 0;
 }
 
 header {
-  border: 1px solid red;
   color: white;
   background-color: rgb(30, 167, 247);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* margin-left: 0;
-  top: 0; */
 }
 
 .burger-and-country {
@@ -31,25 +27,27 @@ header {
 }
 
 .search-bar {
+  background-color: rgb(60, 169, 232);
   width: 20%;
-  padding: 10px;
+  margin-left: 2rem;
+  margin: 1rem;
+  padding-left: 1rem;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
   border-radius: 10px;
   display: flex;
   align-items: center;
 }
-
 .search-bar input {
-  margin-left: 0.5rem;
+  background-color: rgb(60, 169, 232);
+  fill: white;
+  color: white;
+  width: 100%;
+  padding: 20px;
   border: none;
   outline: none;
 }
 
-/* .search-bar {
-  border: 1px solid red;
-  width: 20%;
-
-  top: 2rem;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-} */
+.search-bar input::placeholder {
+  color: white;
+}

@@ -11,7 +11,6 @@ const App = () => {
   useEffect(() => {
     service.getAll().then((country) => {
       setCountries(country);
-      console.log(country);
     });
   }, []);
 

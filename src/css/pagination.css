@@ -1,0 +1,22 @@
+.paginationCommandsContainer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  column-gap: 2rem;
+  margin-right: 10rem;
+}
+
+select {
+  border: none;
+}
+
+.paginationArrows {
+  height: 1rem;
+  width: 1rem;
+}
+
+.disabledArrow {
+  filter: invert(70%);
+  height: 1rem;
+  width: 1rem;
+}

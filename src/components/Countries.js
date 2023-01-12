@@ -10,7 +10,7 @@ const Countries = ({ filteredCountries }) => {
         <table style={{ width: "100%" }}>
           <thead>
             <tr className="countryTableHeadings">
-              <td>Flag</td>
+              <td className="flagText">Flag</td>
               <td>Name</td>
               <td>Region</td>
               <td>Population</td>

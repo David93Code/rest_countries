@@ -1,6 +1,7 @@
-body {
-  margin: 1.5rem;
+.countryPageCardContainer {
+  padding: 3rem;
 }
+
 .countryCardHeader {
   margin-bottom: 3rem;
   display: flex;
@@ -8,7 +9,6 @@ body {
 }
 
 .countryInitialLetter {
-  margin-left: 1rem;
   margin-right: 2rem;
   padding: 1rem 1.2rem;
   color: white;
@@ -24,8 +24,8 @@ body {
   margin-left: auto;
 }
 
-.flag {
-  margin-left: 2rem;
+.imageAndText {
+  margin-bottom: 2rem;
 }
 
 .apiText {

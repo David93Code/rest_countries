@@ -8,7 +8,7 @@ import kebabMenu from "../images/kebabMenu.png";
 import downArrow from "../images/down-arrow.png";
 import "../css/countryPage.css";
 
-const CountryPage = (countries) => {
+const CountryPage = ({ countries }) => {
   const [country, setCountry] = useState([]);
   const { countryId } = useParams();
 
@@ -18,6 +18,11 @@ const CountryPage = (countries) => {
       console.log(country[0]);
     });
   }, [countryId]);
+
+  const nextCountry =
+    countries
+      .sort((a, b) => a.name?.common.localeCompare(b.name?.common))
+      .findIndex((el) => el.name?.common === country.name?.common) + 1;
 
   return (
     <div className="countryPageCardContainer">
@@ -69,8 +74,22 @@ const CountryPage = (countries) => {
             <img style={{ width: "1rem" }} src={map} />
           </a>
         </div>
-
-        <img className="downArrow" style={{ width: "1rem" }} src={downArrow} />
+        <Link
+          to={
+            "/" +
+            countries[
+              nextCountry >= countries.length
+                ? countries.length - 1
+                : nextCountry
+            ]?.cca2
+          }
+        >
+          <img
+            className="downArrow"
+            style={{ width: "1rem" }}
+            src={downArrow}
+          />
+        </Link>
       </section>
     </div>
   );

@@ -80,6 +80,7 @@ const Pagination = ({
         <p>
           {currentPage * 5 - 4} - {currentPage * 5}
         </p>
+        <p>{countriesPerPage}</p>
       </nav>
     </div>
   );

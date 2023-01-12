@@ -1,0 +1,47 @@
+body {
+  margin: 1.5rem;
+}
+.countryCardHeader {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.countryInitialLetter {
+  margin-left: 1rem;
+  margin-right: 2rem;
+  padding: 1rem 1.2rem;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid rgb(236, 42, 8);
+  background-color: rgb(236, 42, 8);
+  font-weight: 700;
+  font-size: larger;
+}
+
+.kebab {
+  height: 3rem;
+  margin-left: auto;
+}
+
+.flag {
+  margin-left: 2rem;
+}
+
+.apiText {
+  color: blue;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftArrow {
+  margin-right: 1rem;
+}
+
+.downArrow {
+  margin-right: 1rem;
+}

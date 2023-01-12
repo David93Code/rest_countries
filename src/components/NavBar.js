@@ -21,7 +21,7 @@ const NavBar = ({ countries }) => {
   return (
     <div>
       <header>
-        <section className="burger__countries">
+        <section className="burger-and-country">
           <div className="burger">
             <div className="burgerLines"></div>
             <div className="burgerLines"></div>

@@ -35,7 +35,7 @@ const CountryPage = (countries) => {
         <p>
           The country belongs to{" "}
           <span className="apiText">{country.region}</span> region and{" "}
-          <span className="apiText">{country.subregion}</span> subregion.
+          <span className="apiText">{country.subregion}</span> sub-region.
           <br />
           Located at the{" "}
           <span className="apiText">

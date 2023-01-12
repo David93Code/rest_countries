@@ -4,9 +4,14 @@
 } */
 
 table {
+  border-block: solid;
   border-collapse: separate;
   border-spacing: 0 2em;
   table-layout: fixed;
+}
+
+.countryHeadings {
+  border-block: solid;
 }
 
 .rightArrow {

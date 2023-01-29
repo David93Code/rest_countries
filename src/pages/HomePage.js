@@ -12,6 +12,8 @@ const HomePage = ({ countries }) => {
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
   // Takes the desired amount of countries from the countries array based on the countriesPerPage State
   // sort with localeCompare puts the countries in alphabetical order
+  // Needed to add on line 22-27 searchedCountries variable because by using only the code in paginatedCountries
+  //We would not be able to search among all the Countries because the search bar would search only among the paginatedCountries and leave the others out
   const paginatedCountries = countries
     .sort((a, b) => a.name.common.localeCompare(b.name.common))
     .slice(indexOfFirstCountry, indexOfLastCountry);

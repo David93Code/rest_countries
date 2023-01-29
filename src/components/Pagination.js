@@ -12,16 +12,15 @@ const Pagination = ({
 }) => {
   const pageNumbers = [];
 
+  //We need the totalCountries to be able to calculate how many pages we need to display
   for (let i = 1; i <= Math.ceil(totalCountries / countriesPerPage); i++) {
     pageNumbers.push(i);
   }
 
   const nextPage = () =>
     setCurrentPage((page) => (page !== pageNumbers.length ? page + 1 : page));
-  // !pageNumbers ? setCurrentPage((page) => page + 1) : null;
 
   const prevPage = () => setCurrentPage((page) => (page > 1 ? page - 1 : page));
-  // currentPage > 1 ? setCurrentPage((page) => page - 1) : null;
 
   const changeRowsNumbers = (e) => {
     setCountriesPerPage(e.target.value);
@@ -38,12 +37,14 @@ const Pagination = ({
         <option>20</option>
       </select>{" "}
       <p>
+        {/* Dynamically show the order of countries per page */}
         {currentPage * countriesPerPage - (countriesPerPage - 1)} -{" "}
         {currentPage * countriesPerPage > totalCountries
           ? totalCountries
           : currentPage * countriesPerPage}
       </p>
       <img
+        // Assigns different className according to which page are we on
         className={currentPage !== 1 ? "paginationArrows" : " disabledArrow"}
         onClick={prevPage}
         src={leftArrow}

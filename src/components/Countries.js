@@ -35,6 +35,8 @@ const Countries = ({ filteredCountries }) => {
                     {country.languages ? (
                       <ul>
                         {" "}
+                        {/* we need Object.value because language is an object and we can´t map objects so we need to first create an array
+                            from the language object and then map it in order to be able to display the languages */}
                         {Object.values(country.languages).map((language) => {
                           return <li key={language}>{language}</li>;
                         })}

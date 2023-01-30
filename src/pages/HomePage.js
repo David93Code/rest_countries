@@ -7,7 +7,7 @@ const HomePage = ({ countries }) => {
   const [countriesPerPage, setCountriesPerPage] = useState(5);
   const [searchInput, setSearchInput] = useState("");
 
-  // Get current posts
+  // Get current countries
   const indexOfLastCountry = currentPage * countriesPerPage;
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
   // Takes the desired amount of countries from the countries array based on the countriesPerPage State
